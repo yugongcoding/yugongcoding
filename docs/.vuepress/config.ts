@@ -165,19 +165,33 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           }
         ],
       },
-      // 网站动态
       {
-        text: '网站动态',
-        link: '/other/weblog.md'
+        text: '更多',
+        items: [
+          // 网站动态
+          {
+            text: '网站动态',
+            link: '/other/weblog.md'
+          },
+          {
+            text: '关于我们',
+            link: '/other/about.md'
+          },
+          {
+            text: '快速了解',
+            link: '/other/introduce.md'
+          },
+          {
+            text: '网站地图',
+            link: '/other/web_map/'
+          },
+          {
+            text: '实用工具',
+            link: '/other/usefule_tools/'
+          }
+        ]
       },
-      {
-        text: '关于我们',
-        link: '/other/about.md'
-      },
-      {
-        text: '快速了解',
-        link: '/other/introduce.md'
-      }
+
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
@@ -234,6 +248,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     // sidebar: 'structuring',
     sidebar: {
+      '/other/usefule_tools/': [
+        'friendship_links',
+        'technical_learning'
+      ],
+      '/other/web_map/': [
+        'python_learn',
+        'java_learn'
+      ],
       '/computer/coding/python/': [
         {
             title: 'Python3简介',
