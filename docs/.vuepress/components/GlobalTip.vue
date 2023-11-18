@@ -172,7 +172,7 @@ function nextAllTipElement(elem) {
 }
 
 .icon {
-  margin-right: 0px;
+  /* margin-right: 10px; */
   line-height: 17px;
 }
 

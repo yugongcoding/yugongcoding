@@ -21,7 +21,7 @@ export default {
       this.init();
     }
   },
-  methods: { 
+  methods: {
     init() {
       var cvs = document.getElementById("cvs");
       if (!cvs) {
@@ -621,7 +621,7 @@ export default {
   background-attachment: fixed !important;
 }
 /* 图片中间的签名和标题位置 */
-.banner-conent {
+/* .banner-conent {
   margin-top: 23vh !important;
-}
+} */
 </style>

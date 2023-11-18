@@ -375,7 +375,7 @@ div.v-dialog-overlay {
 }
 
 .icon {
-  margin-right: 10px;
+  // margin-right: 10px;
   line-height: 17px;
 }
 
