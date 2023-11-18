@@ -1,15 +1,3 @@
----
-title: 关于
-date: 2023-11-17 21:57:25
-permalink: /pages/0dbd5d/
-categories:
-  - other
-tags:
-  - null
-author:
-  name: YuGong
-  link: https://github.com/Alan-Rick
----
 ## 前言
 
 写这份教程初衷，主要要两点，一是回馈社会，二是作为自己知识的总结。本人毕业转行计算机，自学了大量的计算机知识，阅读了无数的博客文章，走了不少弯路，这些博客良莠不齐，但是是他们帮助我学习到了很多知识，使得我在计算机的职业生涯中更进一步，十分感谢前辈的奉献精神。
