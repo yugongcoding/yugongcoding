@@ -2,14 +2,14 @@
 title: python_tool
 date: 2023-11-18 09:59:18
 permalink: /pages/b339b0/
-categories: 
+categories:
   - computer
   - coding
   - python
   - basic
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---

@@ -2,14 +2,14 @@
 title: python_datatype
 date: 2023-11-18 10:01:02
 permalink: /pages/311e1d/
-categories: 
+categories:
   - computer
   - coding
   - python
   - basic
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---

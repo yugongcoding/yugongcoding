@@ -2,16 +2,16 @@
 title: python_introduction
 date: 2023-11-17 21:57:25
 permalink: /pages/bc67bd/
-categories: 
+categories:
   - computer
   - coding
   - python
   - basic
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 1.1 Python简介
 

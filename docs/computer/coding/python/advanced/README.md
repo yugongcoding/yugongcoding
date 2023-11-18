@@ -2,15 +2,15 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/2586e2/
-categories: 
+categories:
   - computer
   - coding
   - python
   - advanced
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # python3进阶

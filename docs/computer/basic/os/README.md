@@ -2,14 +2,14 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/17c342/
-categories: 
+categories:
   - computer
   - basic
   - os
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 操作系统

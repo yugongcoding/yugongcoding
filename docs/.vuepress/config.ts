@@ -181,14 +181,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'https://github.com/Alan-Rick/yugongcoding', // 导航栏右侧生成Github链接
+    repo: 'https://github.com/yugongcoding/yugongcoding', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 20, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
      // 以下为可选的编辑链接选项
     // 假如你的文档仓库和项目本身不在一个仓库：
-    docsRepo: 'https://github.com/Alan-Rick/yugongcoding',
+    docsRepo: 'https://github.com/yugongcoding/yugongcoding',
     // 假如文档不是放在仓库的根目录下：
     // 假如文档放在一个特定的分支下：
     docsBranch: 'main',
@@ -267,7 +267,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'YuGong', // 必需
-      link: 'https://github.com/Alan-Rick', // 可选的
+      link: 'https://github.com/yugongcoding', // 可选的
     },
 
     // 博主信息 (显示在首页侧边栏)
@@ -289,7 +289,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/Alan-Rick',
+          link: 'https://github.com/yugongcoding',
         },
         {
           iconClass: 'icon-erji',
@@ -310,7 +310,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     extendFrontmatter: {
       author: {
         name: 'YuGong',
-        link: 'https://github.com/Alan-Rick'
+        link: 'https://github.com/yugongcoding'
       }
     },
 

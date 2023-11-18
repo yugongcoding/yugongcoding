@@ -2,13 +2,13 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/e2c2e8/
-categories: 
+categories:
   - bigdata
   - handoop
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # handoop大数据存储啊

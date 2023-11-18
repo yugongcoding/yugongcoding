@@ -2,12 +2,12 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/469d6e/
-categories: 
+categories:
   - computer
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 计算机基础

@@ -2,14 +2,14 @@
 title: substract
 date: 2023-11-17 21:57:25
 permalink: /pages/02fa9b/
-categories: 
+categories:
   - computer
   - basic
   - network
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 前言

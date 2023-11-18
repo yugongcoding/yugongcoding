@@ -2,16 +2,16 @@
 title: python_env
 date: 2023-11-18 09:59:05
 permalink: /pages/251ff4/
-categories: 
+categories:
   - computer
   - coding
   - python
   - basic
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # a
 

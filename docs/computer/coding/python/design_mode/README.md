@@ -2,16 +2,16 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/ea2869/
-categories: 
+categories:
   - computer
   - coding
   - python
   - design_mode
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # python
 

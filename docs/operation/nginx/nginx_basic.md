@@ -2,14 +2,14 @@
 title: nginx_basic
 date: 2023-11-17 21:57:25
 permalink: /pages/6d3b1e/
-categories: 
+categories:
   - operation
   - nginx
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # Nginx基础
 

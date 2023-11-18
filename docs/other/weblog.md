@@ -8,6 +8,6 @@ tags:
   - null
 author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 网站动态

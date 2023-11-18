@@ -2,14 +2,14 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/a76352/
-categories: 
+categories:
   - computer
   - coding
   - node
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # node学习

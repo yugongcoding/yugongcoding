@@ -2,16 +2,16 @@
 title: python_decorator
 date: 2023-11-17 21:57:25
 permalink: /pages/771db0/
-categories: 
+categories:
   - computer
   - coding
   - python
   - advanced
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # python3装饰器
 

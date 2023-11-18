@@ -2,16 +2,16 @@
 title: python_advanced
 date: 2023-11-17 21:57:25
 permalink: /pages/32c39d/
-categories: 
+categories:
   - computer
   - coding
   - python
   - useful_module
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # python装饰器
 

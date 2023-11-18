@@ -2,14 +2,14 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/6c19f3/
-categories: 
+categories:
   - computer
   - basic
   - compile
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # 编译原理

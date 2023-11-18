@@ -2,13 +2,13 @@
 title: README
 date: 2023-11-17 21:57:25
 permalink: /pages/a60e52/
-categories: 
+categories:
   - database
   - mongodb
-tags: 
+tags:
   - null
-author: 
+author:
   name: YuGong
-  link: https://github.com/Alan-Rick
+  link: https://github.com/yugongcoding
 ---
 # mongodb

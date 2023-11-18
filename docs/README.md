@@ -21,5 +21,5 @@ features:
 # footer: MIT Licensed | Copyright © 2018-present
 ---
 ::: slot footer
-MIT Licensed | Copyright © 2018-present [YuGong](https://github.com/Alan-Rick)
+MIT Licensed | Copyright © 2018-present [YuGong](https://github.com/yugongcoding)
 :::
