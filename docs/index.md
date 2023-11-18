@@ -1,5 +1,6 @@
 ---
 home: true
+
 heroImage: /img/logo.png
 heroText: YuGong
 tagline: 知其然，知其所以然，知其所以必然
@@ -23,3 +24,7 @@ features:
 ::: slot footer
 MIT Licensed | Copyright © 2018-present [YuGong](https://github.com/yugongcoding)
 :::
+
+<ClientOnly>
+  <WebInfo />
+</ClientOnly>

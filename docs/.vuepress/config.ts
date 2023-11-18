@@ -7,11 +7,13 @@ import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
+import { readFileList, readTotalFileWords, readEachFileWords } from './webSiteInfo/readFile';
+
 
 const DOMAIN_NAME = 'yugongcoding.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
-export default defineConfig4CustomTheme<VdoingThemeConfig>({
+export default <VdoingThemeConfig>({
   theme: 'vdoing', // 使用npm主题包
   // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
   locales: {
@@ -21,11 +23,27 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       description: '全栈技术技术博客,专注于编程技术开发。python,java,JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
     }
   },
+  // 站点配置（首页 & 文章页）
 
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
   // 主题配置
   themeConfig: {
+    blogInfo: {
+      blogCreate: "2023-11-19", // 博客创建时间
+      indexView: true, // 开启首页的访问量和排名统计，默认 true（开启）
+      pageView: true, // 开启文章页的浏览量统计，默认 true（开启）
+      readingTime: true, // 开启文章页的预计阅读时间，条件：开启 eachFileWords，默认 true（开启）。可在 eachFileWords 的 readEachFileWords 的第二个和第三个参数自定义，默认 1 分钟 300 中文、160 英文
+      eachFileWords: readEachFileWords([""], 300, 160), // 开启每个文章页的字数。readEachFileWords(['xx']) 关闭 xx 目录（可多个，可不传参数）下的文章页字数和阅读时长，后面两个参数分别是 1 分钟里能阅读的中文字数和英文字数。无默认值。readEachFileWords() 方法默认排除了 article 为 false 的文章
+      mdFileCountType: "archives", // 开启文档数。1. archives 获取归档的文档数（默认）。2. 数组 readFileList(['xx']) 排除 xx 目录（可多个，可不传参数），获取其他目录的文档数。提示：readFileList() 获取 docs 下所有的 md 文档（除了 `.vuepress` 和 `@pages` 目录下的文档）
+      totalWords: "archives", // 开启本站文档总字数。1. archives 获取归档的文档数（使用 archives 条件：传入 eachFileWords，否则报错）。2. readTotalFileWords(['xx']) 排除 xx 目录（可多个，可不传参数），获取其他目录的文章字数。无默认值
+      moutedEvent: ".categories-wrapper", // 首页的站点模块挂载在某个元素后面（支持多种选择器），指的是挂载在哪个兄弟元素的后面，默认是热门标签 '.tags-wrapper' 下面，提示：'.categories-wrapper' 会挂载在文章分类下面。'.blogger-wrapper' 会挂载在博客头像模块下面
+      // 下面两个选项：第一次获取访问量失败后的迭代时间
+      indexIteration: 2500, // 如果首页获取访问量失败，则每隔多少时间后获取一次访问量，直到获取成功或获取 5 次后。默认 3 秒。注意：设置时间太低，可能导致访问量 + 2、+ 3 ......
+      pageIteration: 2500, // 如果文章页获取访问量失败，则每隔多少时间后获取一次访问量，直到获取成功或获取 5 次后。默认 3 秒。注意：设置时间太低，可能导致访问量 + 2、+ 3 ......
+      // 说明：成功获取一次访问量，访问量 + 1，所以第一次获取失败后，设置的每个隔段重新获取时间，将会影响访问量的次数。如 100 可能每次获取访问量 + 3
+    },
+    searchPlaceholder: "按下 𝑺 搜索", // 可选：搜索栏占位文本
     smoothScroll: true,
     activeHeaderLinks: true,
     // 导航配置
@@ -323,9 +341,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 页脚信息
     footer: {
-      createYear: 2019, // 博客创建年份
+      createYear: 2023, // 博客创建年份
       copyrightInfo:
-        'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'YuGong | <a href="https://github.com/yugongcoding/yugongcoding/blob/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -343,6 +361,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
     ['link', { rel: 'icon', href: '/img/logo.png', sizes: '16x16' }], //favicons，资源放在public文件夹
+    ['link', { rel: 'stylesheet', href: '//at.alicdn.com/t/font_3114978_qe0b39no76.css' }], // 阿里在线矢量库
     [
       'meta',
       {
@@ -352,6 +371,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
     // [
     //   'script',
     //   {
@@ -365,6 +385,47 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 插件配置
   plugins: <UserPlugins>[
+    // 自定义插件，即本地插件
+  [
+    {
+      name: 'custom-plugins',
+      // , "BlockToggle", "GlobalTip", "Aplayer", "Card"
+      globalUIComponents: ["PageInfo", "BlockToggle", "GlobalTip"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+    }
+  ],
+
+    // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
+    // [
+    //   'thirdparty-search',
+    //   {
+    //     thirdparty: [
+    //       {
+    //         title: '在MDN中搜索',
+    //         frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+    //         behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+    //       },
+    //       {
+    //         title: '在Runoob中搜索',
+    //         frontUrl: 'https://www.runoob.com/?s=',
+    //       },
+    //       {
+    //         title: '在Vue API中搜索',
+    //         frontUrl: 'https://cn.vuejs.org/v2/api/#',
+    //       },
+    //       {
+    //         title: '在Bing中搜索',
+    //         frontUrl: 'https://cn.bing.com/search?q=',
+    //       },
+    //       {
+    //         title: '通过百度搜索本站的',
+    //         frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+    //       },
+    //     ],
+    //   }
+    // ],
+    // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
+    'fulltext-search',
+    // ['flexsearch-pro'],
     [
       "sitemap", // 网站地图
       {
@@ -372,46 +433,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
+    ['vuepress-plugin-baidu-autopush'], // 百度自动推送
 
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
       {
         hm: baiduCode,
       },
-    ],
-
-    // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-    // 'fulltext-search',
-
-    // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
-    [
-      'thirdparty-search',
-      {
-        thirdparty: [
-          {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-          },
-        ],
-      }
     ],
 
     [
@@ -424,19 +452,19 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    [
-      'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
-      {
-        settings: {
-          // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-          // cssLib: ['http://xxx'], // 在线示例中的css依赖
-          // vue: 'https://jsd.cdn.zzko.cn/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-          jsfiddle: false, // 是否显示 jsfiddle 链接
-          codepen: true, // 是否显示 codepen 链接
-          horizontal: false, // 是否展示为横向样式
-        },
-      },
-    ],
+    // [
+    //   'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    //   {
+    //     settings: {
+    //       // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
+    //       // cssLib: ['http://xxx'], // 在线示例中的css依赖
+    //       // vue: 'https://jsd.cdn.zzko.cn/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+    //       jsfiddle: false, // 是否显示 jsfiddle 链接
+    //       codepen: true, // 是否显示 codepen 链接
+    //       horizontal: false, // 是否展示为横向样式
+    //     },
+    //   },
+    // ],
     [
       'vuepress-plugin-zooming', // 放大图片
       {
@@ -474,6 +502,18 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+    [
+      'reading-progress'
+    ],
+    [
+      'cursor-effects',
+      {
+        size: 2, // 粒子的大小，默认值：2
+        shape: 'star', // 粒子的形状，star：星形，circle：圆形。默认值：star
+        zIndex: 999999999, // 页面的索引属性，默认值：99999999，
+      },
+    ],
+    ['tabs']
   ],
 
   markdown: {

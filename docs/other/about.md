@@ -1,5 +1,5 @@
 ---
-title: 关于
+title: 关于我们
 date: 2023-11-17 21:57:25
 permalink: /pages/0dbd5d/
 categories:
@@ -57,6 +57,6 @@ author:
 
 ## 公众号
 
-扫描二维码，关注公众号，联系我~
+以下是我的个人公众号，扫码关注，随时与我联系~
 
-![img](/img/public.jpg)
+![1700320659909](./images/about/1700320659909.jpg)

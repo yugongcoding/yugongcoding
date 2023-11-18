@@ -1,5 +1,5 @@
 ---
-title: README
+title: Python3简介
 date: 2023-11-17 21:57:25
 permalink: /pages/2d9140/
 categories:
