@@ -6,6 +6,7 @@ heroText: YuGong
 tagline: 知其然，知其所以然，知其所以必然
 actionText: 快速了解 →
 actionLink: /other/introduce
+postList:
 features:
 - title: 开发
   details: 用通俗易懂的语言教会大家学习编程语言，我们不仅要会开发，还要知道为什么这么开发。

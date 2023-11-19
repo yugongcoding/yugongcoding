@@ -10,7 +10,7 @@ import htmlModules from './config/htmlModules' // 自定义插入的html块
 import { readFileList, readTotalFileWords, readEachFileWords } from './webSiteInfo/readFile';
 
 
-const DOMAIN_NAME = 'yugongcoding.com' // 域名 (不带https)
+const DOMAIN_NAME = 'www.yugongcoding.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default <VdoingThemeConfig>({
@@ -234,7 +234,7 @@ export default <VdoingThemeConfig>({
     // category: false, // 是否打开分类功能，默认true
     // tag: false, // 是否打开标签功能，默认true
     // archive: false, // 是否打开归档功能，默认true
-    // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
+    categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
     // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
@@ -312,7 +312,7 @@ export default <VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: 'img/logo.png',
+      avatar: '/img/logo.png',
       name: 'YuGong',
       slogan: '知其然，知其所以然，知其所以必然',
     },
@@ -390,7 +390,7 @@ export default <VdoingThemeConfig>({
     {
       name: 'custom-plugins',
       // , "BlockToggle", "GlobalTip", "Aplayer", "Card"
-      globalUIComponents: ["PageInfo", "BlockToggle", "GlobalTip"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+      globalUIComponents: ["PageInfo", "BlockToggle"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
     }
   ],
 
@@ -479,11 +479,11 @@ export default <VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          clientID: '4b6e3c673decc749f9e0',
+          clientSecret: '98b52e433790b726bb917f252d34f4943abbad26',
+          repo: 'yugongcoding', // GitHub 仓库
+          owner: 'yugongcoding', // GitHub仓库所有者
+          admin: ['yugongcoding'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
